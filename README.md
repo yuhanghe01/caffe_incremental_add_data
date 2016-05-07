@@ -6,4 +6,4 @@ The simplest way to address this problem is to directly add new image to the exi
 My proposed approach time cost mainly derives from two sides: the first one is to read and convert newly added image data, the second one is to read the existing LEVELDB/LMDB data and store it to the new destination database. However, I find out that the time used to reading LEVELDB/LMDB data is almost negligible comparing to reading an image and further convert it LEVELDB/LMDB format. I conducted two experiments:
 
 1. 50,000 images + 50,000 LEVELDB-encoded image: about 7 mins; 100,000+ images: about 14 mins.
-2. 5,000,000 images: about 10+ hours ; 300,000+ images + 5,000,000 images: about 2.3 hours.
+2. 5,000,000 images: about 10+ hours ; 300,000+ images + 5,000,000 LEVELDB-encoded images: about 2.3 hours.
